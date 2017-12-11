@@ -22,6 +22,8 @@
 /** The name of the database for WordPress */
 define('DB_NAME', 'wordpress');
 
+define('FS_METHOD', "direct");
+
 /** MySQL database username */
 define('DB_USER', 'wordpress');
 
