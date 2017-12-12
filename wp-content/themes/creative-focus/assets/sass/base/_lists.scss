@@ -1,0 +1,59 @@
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    &%default-ul {
+        list-style-type: disc;
+        margin-bottom: $base-spacing / 2;
+        padding-left: $base-spacing;
+    }
+
+    &%default-ol {
+        list-style-type: decimal;
+        margin-bottom: $base-spacing / 2;
+        padding-left: $base-spacing;
+    }
+}
+
+dl {
+    margin-bottom: $base-spacing / 2;
+
+    dt {
+        font-weight: bold;
+        margin-top: $base-spacing / 2;
+    }
+
+    dd {
+        margin: 0;
+    }
+}
+
+ul {
+    @extend %default-ul;
+}
+
+ol {
+    @extend %default-ol;
+}
+// List options
+// [converter] extracted from `.list-unstyled` for libsass compatibility
+@mixin list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+// [converter] extracted as `@mixin list-unstyled` for libsass compatibility
+.list-unstyled {
+    @include list-unstyled;
+}
+// Inline turns list items into inline-block
+.list-inline {
+    @include list-unstyled;
+    margin-left: -$base-spacing / 4;
+    > li {
+        display: inline-block;
+        padding-left: $base-spacing / 4;
+        padding-right: $base-spacing / 4;
+    }
+}
